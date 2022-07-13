@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form cơ bản</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 62.5%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+        }
+        .my-form {
+            width: 50%;
+            margin: auto;
+            padding: 16px;
+            background-color: #d6feff;
+        }
+        .form-container {
+            padding: 6px;
+            background-color: white;
+        }
+        .form-heading {
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: white;
+            text-align: center;
+            background-color: #ff4d1c;
+            padding: 2px 0;
+        }
+        .form-body {
+            margin-top: 6px;
+            display: flex;
+        }
+        .form-label {
+            width: 20%;
+            margin-top: 7px;
+            color: #2944b3;
+            font-size: 1.4rem;
+            text-align: right;
+        }
+        .form-label-name + .form-label-name {
+            margin-top: 21px;
+        }
+        .form-hobby {
+            padding: 0 12px;
+            width: 80%;
+        }
+        .form-input-name {
+            display: block;
+            width: 63%;
+            padding: 6px 12px;
+            margin-bottom: 8px;
+        }
+        .form-input-email {
+            padding: 6px 12px;
+        }
+        .form-list-hobby {
+            margin-top: 17px;
+            font-size: 1.2rem;
+            color: red;
+            display: flex;
+        }
+        .hobby-col {
+            width: 30%;
+        }
+        .wrap-hobby-item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        .hobby-item {
+            margin: 0 8px;
+        }
+        input {
+            outline: none;
+            border: 1px solid #ccc;
+        }
+        .submit-btn,
+        .reset-btn {
+            margin-top: 8px;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+        }
+        .reset-btn {
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="my-form">
+        <div class="form-container">
+            <div class="form-header">
+                <h3 class="form-heading">Sở thích của bạn</h3>
+            </div>
+            <div class="form-body">
+                <div class="form-label">
+                    <p class="form-label-name">Họ và tên</p>
+                    <p class="form-label-name">Email</p>
+                    <p class="form-label-name">Sở thích</p>
+                </div>
+
+                <form class="form-hobby">
+                    <input type="text" class="form-input-name" name="yourname">
+                    <input type="email" class="form-input-email" name="email">
+                    <div class="form-list-hobby">
+                        <div class="hobby-col">
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Thể thao</div>
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Lướt web</div>
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Du lịch</div>
+                        </div>
+                        <div class="hobby-col">
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Âm nhạc</div>
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Chơi game</div>
+                        </div>
+                        <div class="hobby-col">
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Đọc sách</div>
+                            <div class="wrap-hobby-item"><input type="checkbox" class="hobby-item">Điện ảnh</div>
+                        </div>
+                    </div>
+                    <input type="submit" class="submit-btn" value="Gửi thông tin">
+                    <input type="reset" class="reset-btn" value="Nhập lại">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
