@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        p::first-line {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+        p::first-letter {
+            font-size: 40px;
+            color: red;
+            background-color: yellow;
+            padding: 4px 6px;
+        }
+        .box,
+        .box-1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .box::before {
+            content: "Hi guys";
+            color: red;
+            font-size: 50px;
+        }
+        .box::after {
+            content: "Hello guys";
+            color: violet;
+            font-size: 30px;
+        }
+        .box-1 {
+            position: absolute;
+            bottom: -210px;
+            display: none;
+            border-radius: 10px;
+        }
+        .box-1::before {
+            content: "";
+            border-width: 15px 18px;
+            border-style: solid;
+            border-color: transparent transparent aqua transparent;
+            position: absolute;
+            top: -25px;
+            left: 0;
+        }
+        /* .box-1::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -15px;
+            width: 100px;
+            height: 20px;
+            background-color: black;
+        } */
+        .notify {
+            position: relative;
+        }
+        .notify:hover .box-1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>Viết vào đây một cái gì đó thật dài You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+    <div class="box">Hello anh em</div>
+
+        <a href="#" class="notify">
+            <div>Notify</div>
+            <div class="box-1"></div>
+        </a>
+</body>
+</html>

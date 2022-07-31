@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" main="IE=edge">
+    <meta name="viewport" main="width=device-width, initial-scale=1.0">
+    <title>Thực hành dựng khung cơ bản</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .header {
+            height: 100px;
+        }
+        .header__logo {
+            float: left;
+            width: 25%;
+            height: 100%;
+            background-color: purple;
+        }
+        .header__banner {
+            float: left;
+            width: 75%;
+            height: 100%;
+            background-color: green;
+        }
+        .navbar {
+            margin: 10px 0;
+            height: 60px;
+            background-color: yellow;
+        }
+
+        .navbar__list {
+            margin: 0;
+            padding: 0;
+            width: 60%;
+            display: inline-block;
+        }
+
+        .list-item {
+            line-height: 60px;
+            height: 60px;
+            padding: 0 12px;
+            background-color: orange;
+            display: inline-block;
+        }
+
+        .list-item + .list-item {
+            margin-left: 4px;
+        }
+
+        .navbar__search {
+            margin-top: 20px;
+            float: right;
+        }
+
+        .main {
+            height: 400px;
+        }
+
+        .category {
+            width: 20%;
+            float: left;
+        }
+
+        .category-1 {
+            height: 200px;
+            background-color: red;
+        }
+
+        .category-2 {
+            height: 150px;
+            background-color: navajowhite;
+        }
+
+        .content {
+            float: left;
+            height: 100%;
+            width: 60%;
+            background-color: turquoise;
+        }
+        .hot-news {
+            width: 50%;
+            height: 100px;
+            float: left;
+            background-color: aqua;
+        }
+        .photo-slide {
+            width: 50%;
+            height: 100px;
+            float: left;
+            background-color: rgb(100, 98, 98);
+        }
+        .item-1 {
+            height: 120px;
+            width: 30%;
+            float: left;
+            background-color: chartreuse;
+            text-align: center;
+            margin: 8px;
+        }
+
+        .calender {
+            float: left;
+            height: 100%;
+            width: 20%;
+            background-color: navy;
+        }
+
+        .footer {
+            margin-top: 10px;
+            height: 60px;
+            background-color: violet;
+        }
+        .footer-list {
+            text-align: right;
+            float: right;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+            display: inline-block;
+        }
+
+        .footer-list-item {
+            line-height: 60px;
+            height: 60px;
+            padding: 0 12px;
+            background-color: orange;
+            display: inline-block;
+        }
+
+        .footer-list-item + .footer-list-item {
+            margin-left: 4px;
+        }
+
+        .footer-author {
+            margin-top: 20px;
+            display: inline-block;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header__logo"></div>
+        <div class="header__banner"></div>
+    </div>
+    <div class="navbar">
+        <ul class="navbar__list">
+            <li class="list-item">Home</li>
+            <li class="list-item">Students</li>
+            <li class="list-item">Courses</li>
+            <li class="list-item">About Us</li>
+            <li class="list-item">Contact Us</li>
+        </ul>
+        <input type="text" class="navbar__search" placeholder="Search...">
+    </div>
+    <div class="main">
+        <div class="category">
+            <div class="category-1">
+
+            </div>
+            <div class="category-2">
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="content__header">
+                <div class="hot-news">
+
+                </div>
+                <div class="photo-slide">
+
+                </div>
+            </div>
+            <div class="list-news">
+                    <div class="item-1">1</div>
+                    <div class="item-1">2</div>
+                    <div class="item-1">3</div>
+                    <div class="item-1">4</div>
+                    <div class="item-1">5</div>
+                    <div class="item-1">6</div>
+            </div>
+        </div>
+        <div class="calender">
+
+        </div>
+    </div>
+    <div class="footer">
+        <ul class="footer-list">
+            <li class="footer-list-item"><a href="#">Home</a></li>
+            <li class="footer-list-item"><a href="#">Students</a></li>
+            <li class="footer-list-item"><a href="#">Courses</a></li>
+            <li class="footer-list-item"><a href="#">About Us</a></li>
+            <li class="footer-list-item"><a href="#">Contact Us</a></li>
+        </ul>
+        <p class="footer-author">
+            Vui Doan
+        </p>
+    </div>
+
+</body>
+</html>

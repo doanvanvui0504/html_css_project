@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phát triển web xem hoạt hình trực tuyến</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            height: 60px;
+            background-color: rgb(228, 228, 228);
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            color: yellowgreen;
+            text-transform: uppercase;
+        }
+        .nav-list {
+            margin: 4px 0;
+            padding: 0;
+            font-size: 20px;
+            list-style: none;
+            display: flex;
+            justify-content: center;    
+            background-color: rgb(228, 228, 228);
+        }
+        .item {
+            padding: 2px 16px;
+            position: relative;
+        }
+        .item a {
+            color: #333;
+            text-decoration: none;
+        }
+        .item:not(:last-child)::after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 60%;
+            background-color: #333;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        .content {
+            margin-top: 10px;
+            display: flex;
+            padding: 0 20px;
+        }
+        .menu-film {
+            width: 30%;
+        }
+        .list-film {
+            padding: 0;
+            list-style: none;
+        }
+        .film-item + .film-item{
+            margin-top: 24px;
+        }
+        .film-item-link {
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+        .film-img {
+            width: 100%;
+        }
+        .main-content {
+            width: 70%;
+            margin-left: 50px;
+        }
+        .video-phim {
+            width: 100%;
+            height: 500px;
+        }
+        .author {
+            margin: 8px 0;
+        }
+        .footer {
+            margin-top: 8px;
+            height: 40px;
+            background-color: rgb(228, 228, 228);
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header class="header">Phim hoạt hình</header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="item"><a href="https://www.youtube.com/results?search_query=ho%E1%BA%A1t+h%C3%ACnh+doraemon">Phim hoạt hình</a></li>
+                <li class="item"><a href="https://www.youtube.com/results?search_query=Ho%E1%BA%A1t+h%C3%ACnh+Tom+v%C3%A0+Jerry">Phim hoạt hình yêu thích</a></li>
+                <li class="item"><a href="https://gomsocialinvestmentreport.com/cac-nhan-vat-hoat-hinh/">Nhân vật hoạt hình</a></li>
+                <li class="item">Góp ý</li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="menu-film">
+                <ul class="list-film">
+                    <li class="film-item">
+                        <a href="#" class="film-item-link">
+                            <img class="film-img" src="https://i.ytimg.com/vi/mRNQg2TRQL4/maxresdefault.jpg" alt="Video">
+                            <h3 class="video-title">Người Bạn Ốm Dài Của Nobita, Hồi Xưa Mẹ Cũng Như Nobita</h3>
+                        </a>
+                    </li>
+                    <li class="film-item">
+                        <a href="#" class="film-item-link">
+                            <img class="film-img" src="https://i.ytimg.com/vi/NllKnm8V6sA/maxresdefault.jpg" alt="Video">
+                            <h3 class="video-title">Ngày Sinh Nhật Rỗng Túi Của Suneo, Triệu Phú Nobita</h3>
+                        </a>
+                    </li>
+                   <li class="film-item">
+                        <a href="#" class="film-item-link">
+                            <img class="film-img" src="https://i.ytimg.com/vi/6mX66RFC8AU/maxresdefault.jpg" alt="Video">
+                            <h3 class="video-title">Nobita Trong Tim Nobita, Hạnh Phúc Công Chúa Người Cá</h3>
+                        </a>
+                   </li>
+                    <li class="film-item">
+                        <a href="#" class="film-item-link">
+                            <img class="film-img" src="https://i.ytimg.com/vi/bwHMPIlzfVE/maxresdefault.jpg" alt="Video">
+                            <h3 class="video-title">Đừng Cướp Jack Của Tôi, Nàng Tiên Ống Tre Của Nobita</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <iframe class="video-phim" src="https://www.youtube.com/embed/mRNQg2TRQL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3 class="video-title">Người Bạn Ốm Dài Của Nobita, Hồi Xưa Mẹ Cũng Như Nobita</h3>
+                <h4 class="author">Tác giả của truyện Doraemon</h4>
+                <p class="decs">
+                    Fujiko F. Fujio, cha đẻ của bộ truyện vô cùng ăn khách, không chỉ gắn liền với tuổi thơ của trẻ em Nhật Bản mà còn là ký ức của rất nhiều thiếu nhi trên khắp thế giới. Đó là bộ truyện DORAEMON – chú mèo máy đến từ tương lai. Nói đến sức hút của bộ truyện này ở Việt Nam, không khỏi làm những người Nhật lần đầu đến đây bất ngờ.Vào cuối năm 1992, khi chú mèo này lần đầu đến thị trường Việt Nam, đã tạo nên một làn sóng vô cùng mạnh mẽ, mở đường cho việc xuất bản truyện tranh nước ngoài ở Việt Nam thời bấy giờ.
+                </p>
+                <p style="margin-top: 8px">
+                    Fujiko.F. Fujio tên thật là Fujimoto Hiroshi (藤本弘). Trước khi tách ra hoạt động biệt lập. Ông và đồng nghiệp Motoyu Abiko (安孫子素雄) lập thành nhóm và lấy bút danh chung là Fujiko Fujio (藤子不二雄). Tác phẩm Doraemon cũng là thành quả của bộ đôi này. Doraemon ra mắt lần đầu tiên vào tháng 12/1969 sau sự kết hợp với Mangaka Akibo. Tuy nhiên, đến năm 1987, họ đã ngừng hợp tác với nhau, do manga của Akibo chủ yếu dành cho lứa tuổi thanh niên, còn Fujimoto Hiroshi lại muốn hướng tới đối tượng là trẻ em.
+                </p>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2022 Thiết kế web bởi VD.</p>
+        </footer>
+    </div>
+</body>
+</html>
