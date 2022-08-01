@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Layout Responsive</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main {
+            width: 100%;
+        }
+        .header {
+            padding: 20px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #222;
+        }
+        .logo {
+            line-height: 50px;
+            color: #ccc;
+        }
+        .menu-items {
+            display: flex;
+            list-style: none;
+        }
+        .item {
+            height: 50px;
+            line-height: 50px;
+            padding: 0 12px;
+            color: #ccc;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .item:first-child {
+            color: #fff;
+            background-color: rgb(107, 107, 107);
+        }
+        .content {
+            width: 100%;
+            min-height: 86vh;
+            display: flex;
+        }
+        .side-bar {
+            width: 20%;
+            text-align: center;
+            padding: 20px;
+            background-color: #ccc;
+        }
+        .list-item {
+            list-style: none;
+        }
+        .item-link {
+            display: block;
+            margin: 8px;
+            text-decoration: none;
+        }
+        .login {
+            color: #ccc;
+        }
+        .main-content {
+            padding: 20px;
+            width: 60%;
+        }
+        .ads {
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ccc;
+        }
+        .content-item {
+            padding: 20px;
+        }
+        .content-item + .content-item {
+            border-top: 1px solid #ccc;
+        }
+        .ads-item {
+            width: 80%;
+            height: 20%;
+            text-align: center;
+            border: 1px solid #888;
+        }
+        .ads-item + .ads-item {
+            margin-top: 20px;
+        }
+        .footer {
+            color: #ccc;
+            height: 43px;
+            line-height: 43px;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(100, 95, 95);
+        }
+
+        @media (min-width: 740px) and (max-width: 1023px) {
+            .ads {
+                display: none;
+            }
+            .main-content {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 739px) {
+            .ads {
+                display: none;
+            }
+            .side-bar {
+                display: none;
+            }
+            .main-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div style="display: flex">
+                <div class="logo">Logo</div>
+                <ul class="menu-items">
+                    <li class="item">Home</li>
+                    <li class="item">About</li>
+                    <li class="item">Projects</li>
+                    <li class="item">Contact</li>
+                </ul>
+            </div>
+            <div class="login">Login</div>
+        </header>
+        <div class="content">
+            <aside class="side-bar">
+                <ul class="list-item">
+                    <li><a href="#" class="item-link">Link</a></li>
+                    <li><a href="#" class="item-link">Link</a></li>
+                    <li><a href="#" class="item-link">Link</a></li>
+                </ul>
+            </aside>
+            <div class="main-content">
+                <div class="content-item">
+                    <h2 class="title">Welcome</h2>
+                    <p class="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>  
+                </div>
+                <div class="content-item">
+                    <h2 class="title">Test</h2>
+                    <p class="decs">Lorem ipsum...</p>  
+                </div>
+            </div>
+            <div class="ads">
+                <div class="ads-item">ADS</div>
+                <div class="ads-item">ADS</div>
+            </div>
+        </div>
+        <footer class="footer">
+            Footer Text
+        </footer>
+    </div>
+</body>
+</html>

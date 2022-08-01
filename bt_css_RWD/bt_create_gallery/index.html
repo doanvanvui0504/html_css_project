@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Gallery đơn giản sử dụng RWD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .gallery {
+            width: 100%;
+            clear: both;
+        }
+        .gallery::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .wrapper-img-item {
+            width: 25%;
+            float: left;
+            padding: 0 8px;
+        }
+        .image-item  {
+            width: 100%;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .image-item:hover {
+            cursor: pointer;
+            border-color: #333;
+        }
+        .img-hihi {
+            width: 100%;
+        }
+
+        @media (max-width: 699px) {
+            .wrapper-img-item {
+                width: 50%;
+                margin-top: 16px;
+            }
+        }
+        @media (max-width: 500px) {
+            .wrapper-img-item {
+                width: 100%;
+                margin-top: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Responsive Image Gallery</h2>
+
+        <h4>Resize the browser window to see the effect.</h4>
+
+        <div class="gallery">
+            
+            <div class="wrapper-img-item">
+                <div class="image-item">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" alt="Ảnh gì đó" class="img-hihi">
+                    <p class="img-decs">Add a description of the image here</p>
+                </div>
+            </div>
+            
+            <div class="wrapper-img-item">
+                <div class="image-item">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" alt="Ảnh gì đó" class="img-hihi">
+                    <p class="img-decs">Add a description of the image here</p>
+                </div>
+            </div>
+            
+            <div class="wrapper-img-item">
+                <div class="image-item">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" alt="Ảnh gì đó" class="img-hihi">
+                    <p class="img-decs">Add a description of the image here</p>
+                </div>
+            </div>
+            
+            <div class="wrapper-img-item">
+                <div class="image-item">
+                    <img src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" alt="Ảnh gì đó" class="img-hihi">
+                    <p class="img-decs">Add a description of the image here</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="require">This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+    </div>
+</body>
+</html>
